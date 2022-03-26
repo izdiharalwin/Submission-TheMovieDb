@@ -1,7 +1,7 @@
 # Submission-TheMovieDb
 Ini adalah website untuk mencari movie. 
 
-[View web](https://catalogmovie.netlify.app/)
+[Click Me!👋](https://catalogmovie.netlify.app/)
 
 ## How To Use
 1. Memasang seluruh package yang terdapat di devDependencies dan dependencies pada berkas package.json
