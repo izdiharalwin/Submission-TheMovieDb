@@ -1,13 +1,16 @@
 # Submission-TheMovieDb
-Ini adalah website untuk mencari movie. 
+a portal for finding your favorite movie from themoviedb (TMDB)
 
 [Click Me!👋](https://catalogmovie.netlify.app/)
 
 ## How To Use
-1. Memasang seluruh package yang terdapat di devDependencies dan dependencies pada berkas package.json
+* Installing all package inside devDependencies and dependencies on package.json
 
-   ```npm install```
+   ```sh
+   npm install
+   ```
+* Run the project in Local Server
 
-2. Menjalankan proyek pada local server
-
-   ```npm run start-dev```
+   ```sh
+   npm run start-dev
+   ```
