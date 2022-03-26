@@ -1,5 +1,7 @@
 # Submission-TheMovieDb
-Ini adalah website untuk mencari movie
+Ini adalah website untuk mencari movie. 
+
+[View web](https://catalogmovie.netlify.app/)
 
 ## How To Use
 1. Memasang seluruh package yang terdapat di devDependencies dan dependencies pada berkas package.json
@@ -9,6 +11,3 @@ Ini adalah website untuk mencari movie
 2. Menjalankan proyek pada local server
 
    ```npm run start-dev```
-   
-
-[View web](https://catalogmovie.netlify.app/)
