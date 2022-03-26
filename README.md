@@ -9,4 +9,6 @@ Ini adalah website untuk mencari movie
 2. Menjalankan proyek pada local server
 
    ```npm run start-dev```
-[Click Me!👋](https://catalogmovie.netlify.app/)
+   
+
+[View web](https://catalogmovie.netlify.app/)
