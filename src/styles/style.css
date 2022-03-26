@@ -1,0 +1,94 @@
+body{
+    background-color: #398AB9;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+nav{
+    font-family: 'Poppins', sans-serif;
+}
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    margin-right: 80px;
+    color: yellow;
+    font-size: 20px;
+}
+.nav-item{
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-item a:hover {
+    font-weight: bold;
+    color: #00BFFF;
+}
+.navbar-brand:hover {
+    color: #00BFFF;
+    cursor: pointer;
+}
+
+.goto{
+    padding-top: 70px;
+}
+
+.judulcategory{
+    font-weight: bold;
+    padding-top: 60px;
+}
+
+.konten{
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+    background-color: #398AB9;
+    font-family: 'Poppins', sans-serif;
+}
+
+.konten > h1 {
+    padding-bottom: 20px;
+}
+.data-trending-movie{
+    padding: 50px;
+}
+.data-upcoming-movie{
+    padding: 50px;
+}
+.data-popular-movie{
+    padding: 50px;
+}
+.data-toprated-movie{
+    padding: 50px;
+}
+.kontenSearch{
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+    background-color: #398AB9;
+    font-family: 'Poppins', sans-serif;
+}
+.boxSearch {
+    color: #ff8b0d;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.kontenModal{
+    align-items: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+footer {
+    margin-top: 20px;
+    padding: 20px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    color: deepskyblue;
+}
