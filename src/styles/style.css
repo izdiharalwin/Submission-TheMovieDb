@@ -65,7 +65,14 @@ nav{
     background-color: #398AB9;
     font-family: 'Poppins', sans-serif;
 }
-.boxSearch {
+.kontenNowplaying{
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+    background-color: #398AB9;
+    font-family: 'Poppins', sans-serif;
+}
+.boxTitle {
     color: #ff8b0d;
     border-radius: 10px;
     background-color: black;

@@ -4,8 +4,10 @@ const main = () => {
     const upcomingMovies = 'https://api.themoviedb.org/3/movie/upcoming?api_key=dd86bc7def42d90685c99a83ba663864';
     const popularMovies = 'https://api.themoviedb.org/3/movie/popular?api_key=dd86bc7def42d90685c99a83ba663864';
     const topratedMovies = 'https://api.themoviedb.org/3/movie/top_rated?api_key=dd86bc7def42d90685c99a83ba663864';
+    const nowplayingMovies = 'https://api.themoviedb.org/3/movie/now_playing?api_key=dd86bc7def42d90685c99a83ba663864';
 
     document.getElementById("kontenSearch").style.display = "none";
+    document.getElementById("kontenNowplaying").style.display = "none";
     // Function untuk Tampilan Card Movie //
     const showCard = _movie => {
         return `
@@ -21,9 +23,7 @@ const main = () => {
 
     // Menampilkan Trending Movies //
     fetch(trendingMovies)
-        .then(response => {
-            return response.json();
-        })
+        .then(response => response.json())
         .then(responseJson => {
             const movies = responseJson.results;
             let cards = '';
@@ -47,9 +47,7 @@ const main = () => {
 
     // Menampilkan Upcoming Movies //
     fetch(upcomingMovies)
-        .then(response => {
-            return response.json();
-        })
+        .then(response => response.json())
         .then(responseJson => {
             const movies = responseJson.results;
             let cards = '';
@@ -75,9 +73,7 @@ const main = () => {
 
     // Menampilkan Popular Movies //
     fetch(popularMovies)
-        .then(response => {
-            return response.json();
-        })
+        .then(response => response.json())
         .then(responseJson => {
             const movies = responseJson.results;
             let cards = '';
@@ -100,9 +96,7 @@ const main = () => {
 
     // Menampilkan Top Rated Movies //
     fetch(topratedMovies)
-        .then(response => {
-            return response.json();
-        })
+        .then(response => response.json())
         .then(responseJson => {
             const movies = responseJson.results;
             let cards = '';
@@ -141,6 +135,7 @@ const main = () => {
                     })
                 } else {
                     document.getElementById("home").style.display = "none";
+                    document.getElementById("kontenNowplaying").style.display = "none";
                     document.getElementById("kontenSearch").style.display = "block";
                     const movies = responseJson.results;
                     let cards = '';
@@ -165,11 +160,43 @@ const main = () => {
             });
     });
 
+    // Now Playing Movie //
+    const nowplayingButton = document.getElementById("nowplaying")
+    nowplayingButton.addEventListener('click', () => {
+        fetch(nowplayingMovies)
+            .then(response => response.json())
+            .then(responseJson => {
+                document.getElementById("home").style.display = "none";
+                document.getElementById("kontenSearch").style.display = "none";
+                document.getElementById("kontenNowplaying").style.display = "block";
+                const movies = responseJson.results;
+                let cards = '';
+
+                movies.forEach(movie => {
+                    cards += showCard(movie);
+                });
+
+                const nowplayingMovieContainer = document.querySelector('.data-nowplaying-movie');
+                nowplayingMovieContainer.innerHTML = cards;
+
+                const modalDetailBtn = document.querySelectorAll('.modal-detail-button');
+                modalDetailBtn.forEach(button => {
+                    button.addEventListener('click', () => {
+                        getDetail(button.dataset.movieid)
+                    });
+                })
+                // Agar scroll tetap diatas //
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            });
+    });
+
     // Function untuk kembali ke Home //
     const backHome = document.querySelector('#backHome')
     backHome.addEventListener('click', () => {
         document.getElementById("home").style.display = "block";
         document.getElementById("kontenSearch").style.display = "none";
+        document.getElementById("kontenNowplaying").style.display = "none";
     })
 
     const showResponseError = (message = 'Error!') => {

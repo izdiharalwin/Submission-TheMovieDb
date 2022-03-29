@@ -18,6 +18,9 @@ class NavBar extends HTMLElement {
                     <li class="nav-item">
                         <a class="nav-link" id="backHome" aria-current="page" href="#home">Home</a>
                     </li>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" id="nowplaying" aria-current="page" href="#nowplaying">Now Playing</a>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
